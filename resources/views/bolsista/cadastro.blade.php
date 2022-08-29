@@ -59,17 +59,20 @@
                             @enderror
                         </div>
 
-                        <div class="mt-4">
-                            <div>
-                                <input type="radio" id="verdadeiro" name="ativo" value="verdadeiro"
-                                       checked>
-                                <label for="verdadeiro">Verdadeiro</label>
-                            </div>
-
+                        <div class="mt-4 flex flex-col items-center">
+                            <lavel>Bolsista ativo no projeto?</lavel>
                             <div class="mt-4">
-                                <input type="radio" id="falso" name="ativo" value="falso">
+                                <div>
+                                    <input type="radio" id="verdadeiro" name="ativo" value="verdadeiro"
+                                           checked>
+                                    <label for="verdadeiro">Verdadeiro</label>
+                                </div>
 
-                                <label for="falso">Falso</label>
+                                <div class="mt-4">
+                                    <input type="radio" id="falso" name="ativo" value="falso">
+
+                                    <label for="falso">Falso</label>
+                                </div>
                             </div>
                         </div>
 

@@ -34,7 +34,7 @@ class BolsistaController extends Controller
 
         $attributes = request()->validate([
             'nome' => 'required',
-            'cpf' => 'required|unique:bolsistas',
+            'cpf' => 'required|unique:bolsistas|numeric|digits:11',
             'email' => 'required|unique:bolsistas',
             'funcao' => 'required',
         ]);
@@ -72,7 +72,7 @@ class BolsistaController extends Controller
 
         $bolsista->update(request()->validate([
             'nome' => 'required',
-            'cpf' => 'required|unique:bolsistas,cpf,' . $bolsista->id,
+            'cpf' => 'required|numeric|digits:11|unique:bolsistas,cpf,' . $bolsista->id,
             'email' => 'required|unique:bolsistas,email,' . $bolsista->id,
             'funcao' => 'required',
         ]));
